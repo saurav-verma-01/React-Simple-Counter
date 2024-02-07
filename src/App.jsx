@@ -5,9 +5,11 @@ const App = () => {
   const [counter, setCounter] = useState(0);
 
   const addVal = () => {
+    if (counter >= 20) return;
     setCounter((prev) => prev + 1);
   };
   const removeVal = () => {
+    if (counter <= 0) return;
     setCounter((prev) => prev - 1);
   };
   return (
